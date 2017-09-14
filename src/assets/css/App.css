@@ -1,7 +1,33 @@
 header {
   background-color: #0C002B;
-  color: #FFFEFF; }
-  header nav a {
-    color: #FFFEFF; }
-    header nav a:hover {
-      color: #F5678D; }
+  color: #FFFEFF;
+  overflow: auto;
+  padding: 20px 0; }
+  header .nav-wrapper {
+    margin: 0 auto;
+    width: 80%; }
+    header .nav-wrapper .logo {
+      float: left; }
+    header .nav-wrapper nav {
+      float: right; }
+      header .nav-wrapper nav a {
+        color: #FFFEFF;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: .9rem;
+        letter-spacing: .6px; }
+        header .nav-wrapper nav a:hover {
+          color: #F5678D; }
+        header .nav-wrapper nav a:not(.register-button) {
+          margin-right: 45px; }
+        header .nav-wrapper nav a.register-button {
+          background: #F5678D;
+          background: -webkit-linear-gradient(#FF7E85, #F5678D);
+          background: -o-linear-gradient(#FF7E85, #F5678D);
+          background: -moz-linear-gradient(#FF7E85, #F5678D);
+          background: linear-gradient(#FF7E85, #F5678D);
+          padding: 10px 30px;
+          text-align: center;
+          color: #FFFEFF;
+          border-radius: 5px; }

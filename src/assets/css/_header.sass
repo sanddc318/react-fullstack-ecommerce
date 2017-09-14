@@ -3,8 +3,36 @@
 header
   background-color: $darkpurple
   color: $white
-  nav
-    a
-      color: $white
-      &:hover
-        color: $pink
+  overflow: auto
+  padding: 20px 0
+
+  .nav-wrapper
+    margin: 0 auto
+    width: 80%
+
+    .logo
+      float: left
+
+    nav
+      float: right
+      a
+        color: $white
+        text-decoration: none
+        text-transform: capitalize
+        font-weight: 500
+        font-size: .9rem
+        letter-spacing: .6px
+        &:hover
+          color: $pink
+        &:not(.register-button)
+          margin-right: 45px
+        &.register-button
+          background: $pink
+          background: -webkit-linear-gradient($lightpink, $pink)
+          background: -o-linear-gradient($lightpink, $pink)
+          background: -moz-linear-gradient($lightpink, $pink)
+          background: linear-gradient($lightpink, $pink)
+          padding: 10px 30px
+          text-align: center
+          color: $white
+          border-radius: 5px

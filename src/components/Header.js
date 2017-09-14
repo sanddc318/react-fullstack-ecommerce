@@ -10,16 +10,18 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <div>Logo</div>
+        <div className="nav-wrapper">
+          <div className="logo">Logo</div>
 
-        <nav>
-          <a href="#">Create Ads</a>
-          <a href="#">About Us</a>
-          <a href="#">Login</a>
-          <a href="#" className="register-button">
-            Register
-          </a>
-        </nav>
+          <nav>
+            <a href="#">Create Ads</a>
+            <a href="#">About Us</a>
+            <a href="#">Login</a>
+            <a href="#" className="register-button">
+              Register
+            </a>
+          </nav>
+        </div>
       </header>
     )
   }
