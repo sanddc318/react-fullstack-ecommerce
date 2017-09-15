@@ -34,6 +34,7 @@ class Filter extends Component {
               className="min-price"
               placeholder="$200"
             />
+
             <input
               type="text"
               name="max-price"
@@ -50,6 +51,7 @@ class Filter extends Component {
               className="min-floor-space"
               placeholder="90 m"
             />
+
             <input
               type="text"
               name="max-floor-space"
@@ -66,6 +68,7 @@ class Filter extends Component {
               className="min-radius"
               placeholder="1 km"
             />
+
             <input
               type="text"
               name="max-radius"

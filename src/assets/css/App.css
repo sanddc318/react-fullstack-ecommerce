@@ -66,12 +66,20 @@ header {
       border-style: none;
       font-size: .9rem;
       color: #ADA8AA; }
+    #filter .inside .sliders.price {
+      margin-top: 45px; }
+    #filter .inside .sliders.radius {
+      margin-bottom: 45px; }
     #filter .inside .amenities h5 {
-      color: #ADA8AA; }
+      color: #ADA8AA;
+      margin: 0;
+      font-weight: 500; }
     #filter .inside .amenities label {
       display: block;
       width: 100%;
-      padding: 10px 0;
-      border-bottom: 1px solid #d2cfd0; }
+      padding: 15px 0;
+      border-bottom: 1px solid #d2cfd0;
+      font-size: .8rem;
+      color: #666; }
       #filter .inside .amenities label input[type='checkbox'] {
         float: right; }
