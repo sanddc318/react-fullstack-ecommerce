@@ -8,7 +8,7 @@ class Listings extends Component {
   }
 
   render() {
-    return <section class="listings">Listings Comp</section>
+    return <section className="listings">Listings Comp</section>
   }
 }
 
