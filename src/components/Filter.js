@@ -86,7 +86,7 @@ class Filter extends Component {
                 type="checkbox"
                 name="amenities"
                 value="elevator"
-                checked
+                defaultChecked
               />
             </label>
 
@@ -96,7 +96,7 @@ class Filter extends Component {
                 type="checkbox"
                 name="amenities"
                 value="fireplace"
-                checked
+                defaultChecked
               />
             </label>
 
@@ -107,7 +107,12 @@ class Filter extends Component {
 
             <label htmlFor="amenities">
               <span>Gym</span>
-              <input type="checkbox" name="amenities" value="gym" checked />
+              <input
+                type="checkbox"
+                name="amenities"
+                value="gym"
+                defaultChecked
+              />
             </label>
           </div>
         </div>
