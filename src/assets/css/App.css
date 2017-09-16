@@ -33,8 +33,11 @@ header {
           border-radius: 5px; }
 
 #filter {
+  display: inline-block;
+  float: left;
   background-color: #FAF7F5;
-  width: 435px; }
+  width: 30%;
+  border-right: 1px solid #ebeaea; }
   #filter .inside {
     padding: 20px 0;
     max-width: 60%;
@@ -60,7 +63,7 @@ header {
       color: #ADA8AA; }
     #filter .inside .sliders input[type='text'] {
       display: inline-block;
-      width: 42%;
+      width: 40%;
       margin-right: 2.5%;
       margin-bottom: 1rem;
       padding: .4rem;
@@ -86,3 +89,41 @@ header {
       color: #666; }
       #filter .inside .amenities label input[type='checkbox'] {
         float: right; }
+
+#listings {
+  display: inline-block;
+  float: left;
+  width: 69.8%; }
+  #listings .inside {
+    width: 90%;
+    margin: 20px auto 0 auto; }
+    #listings .inside .search-wrapper input[type='text'] {
+      width: 100%;
+      outline: none;
+      display: block;
+      background: transparent;
+      height: 50px;
+      border: none;
+      border-bottom: 1px solid #ebeaea;
+      font-size: 1.8rem;
+      font-weight: 300; }
+    #listings .inside .search-wrapper .results-wrapper {
+      margin: 25px 0;
+      display: flex;
+      justify-content: space-between; }
+      #listings .inside .search-wrapper .results-wrapper small {
+        color: #d2cfd0;
+        font-size: .8rem; }
+      #listings .inside .search-wrapper .results-wrapper .sort-options {
+        width: 28%;
+        display: flex;
+        justify-content: space-between; }
+        #listings .inside .search-wrapper .results-wrapper .sort-options select {
+          background: transparent;
+          font-size: .8rem;
+          font-weight: 500;
+          color: #ADA8AA;
+          outline: none;
+          border-color: #ebeaea; }
+        #listings .inside .search-wrapper .results-wrapper .sort-options i.fa {
+          color: #ADA8AA; }

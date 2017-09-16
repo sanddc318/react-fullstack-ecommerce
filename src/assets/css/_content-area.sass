@@ -1,8 +1,11 @@
 @import 'variables'
 
 #filter
+  display: inline-block
+  float: left
   background-color: $offwhite
-  width: 435px
+  width: 30%
+  border-right: 1px solid lighten($gray, 25%)
 
   .inside
     padding: 20px 0
@@ -34,7 +37,7 @@
 
       input[type='text']
         display: inline-block
-        width: 42%
+        width: 40%
         margin-right: 2.5%
         margin-bottom: 1rem
         padding: .4rem
@@ -70,3 +73,47 @@
 
 
 #listings
+  display: inline-block
+  float: left
+  width: 69.8%
+
+  .inside
+    width: 90%
+    margin: 20px auto 0 auto
+
+    .search-wrapper
+      input[type='text']
+        width: 100%
+        outline: none
+        display: block
+        background: transparent
+        height: 50px
+        border: none
+        border-bottom: 1px solid lighten($gray, 25%)
+        font-size: 1.8rem
+        font-weight: 300
+
+      .results-wrapper
+        margin: 25px 0
+        display: flex
+        justify-content: space-between
+
+        small
+          color: lighten($gray, 15%)
+          font-size: .8rem
+
+        .sort-options
+          width: 28%
+          display: flex
+          justify-content: space-between
+
+          select
+            background: transparent
+            font-size: .8rem
+            font-weight: 500
+            color: $gray
+            outline: none
+            border-color: lighten($gray, 25%)
+
+          i.fa
+            color: $gray
