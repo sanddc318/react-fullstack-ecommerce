@@ -49,14 +49,14 @@ class Filter extends Component {
               type="text"
               name="min-floor-space"
               className="min-floor-space"
-              placeholder="90 m"
+              placeholder="295 ft"
             />
 
             <input
               type="text"
               name="max-floor-space"
               className="max-floor-space"
-              placeholder="150 m"
+              placeholder="490 ft"
             />
           </div>
 
@@ -78,43 +78,55 @@ class Filter extends Component {
           </div>
 
           {/* CHECKBOXES */}
-          <div className="amenities">
-            <h5>Amenities</h5>
-            <label htmlFor="amenities">
+          <section className="amenities">
+            <span className="title">Amenities</span>
+            <div className="amen-checkbox">
               <span>Elevator</span>
               <input
                 type="checkbox"
                 name="amenities"
+                id="checkbox1"
                 value="elevator"
                 defaultChecked
               />
-            </label>
+              <label htmlFor="checkbox1" />
+            </div>
 
-            <label htmlFor="amenities">
+            <div className="amen-checkbox">
               <span>Fireplace</span>
               <input
                 type="checkbox"
                 name="amenities"
+                id="checkbox2"
                 value="fireplace"
                 defaultChecked
               />
-            </label>
+              <label htmlFor="checkbox2" />
+            </div>
 
-            <label htmlFor="amenities">
+            <div className="amen-checkbox">
               <span>Swimming pool</span>
-              <input type="checkbox" name="amenities" value="swimmingpool" />
-            </label>
+              <input
+                type="checkbox"
+                name="amenities"
+                id="checkbox3"
+                value="swimmingpool"
+              />
+              <label htmlFor="checkbox3" />
+            </div>
 
-            <label htmlFor="amenities">
+            <div className="amen-checkbox">
               <span>Gym</span>
               <input
                 type="checkbox"
                 name="amenities"
+                id="checkbox4"
                 value="gym"
                 defaultChecked
               />
-            </label>
-          </div>
+              <label htmlFor="checkbox4" />
+            </div>
+          </section>
         </div>
       </section>
     )

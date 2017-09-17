@@ -32,12 +32,16 @@ header {
           color: #FFFEFF;
           border-radius: 5px; }
 
+#content-area {
+  height: 1050px; }
+
 #filter {
   display: inline-block;
   float: left;
   background-color: #FAF7F5;
   width: 30%;
-  border-right: 1px solid #ebeaea; }
+  border-right: 1px solid #ebeaea;
+  height: 100%; }
   #filter .inside {
     padding: 20px 0;
     max-width: 60%;
@@ -48,14 +52,21 @@ header {
       font-weight: 500;
       font-size: .8rem; }
     #filter .inside select {
-      background: transparent;
-      font-size: .8rem;
+      background: url(../images/chevron-down.png) no-repeat 95% center;
+      background-size: 12px;
+      font-size: .75rem;
       font-weight: 500;
       color: #ADA8AA;
       display: block;
       margin-bottom: 25px;
+      padding: 8px;
       width: 100%;
-      outline: none; }
+      outline: none;
+      border: 0.01px solid #dedddd;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none; }
     #filter .inside .sliders .title {
       font-size: .8rem;
       display: block;
@@ -76,24 +87,62 @@ header {
       margin-top: 45px; }
     #filter .inside .sliders.radius {
       margin-bottom: 45px; }
-    #filter .inside .amenities h5 {
-      color: #ADA8AA;
-      margin: 0;
-      font-weight: 500; }
-    #filter .inside .amenities label {
-      display: block;
-      width: 100%;
-      padding: 15px 0;
-      border-bottom: 1px solid #dedddd;
+    #filter .inside .amenities .title {
       font-size: .8rem;
-      color: #666; }
-      #filter .inside .amenities label input[type='checkbox'] {
-        float: right; }
+      display: block;
+      margin-bottom: 1rem;
+      color: #ADA8AA; }
+    #filter .inside .amenities .amen-checkbox {
+      width: 100%;
+      margin: 10px auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #dedddd;
+      padding-bottom: 10px;
+      color: #555; }
+      #filter .inside .amenities .amen-checkbox span {
+        font-size: .8rem;
+        line-height: 16px; }
+      #filter .inside .amenities .amen-checkbox label {
+        cursor: pointer;
+        position: relative;
+        width: 18px;
+        right: 0;
+        background: transparent;
+        border: 1px solid #ADA8AA;
+        border-radius: 2px; }
+        #filter .inside .amenities .amen-checkbox label:after {
+          opacity: 0.2;
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 5px;
+          background: transparent;
+          top: 4px;
+          left: 4px;
+          border: 2px solid transparent;
+          border-top: none;
+          border-right: none;
+          transform: rotate(-45deg); }
+        #filter .inside .amenities .amen-checkbox label:hover::after {
+          opacity: .5; }
+      #filter .inside .amenities .amen-checkbox input[type='checkbox'] {
+        visibility: hidden; }
+        #filter .inside .amenities .amen-checkbox input[type='checkbox']:checked + label:after {
+          border: 2px solid #FFFEFF;
+          border-top: none;
+          border-right: none;
+          opacity: 1; }
+        #filter .inside .amenities .amen-checkbox input[type='checkbox']:checked + label {
+          background: #F5678D;
+          border: none; }
 
 #listings {
   display: inline-block;
   float: left;
-  width: 69.8%; }
+  width: 69.8%;
+  height: 100%; }
   #listings .inside {
     width: 80%;
     margin: 20px auto 0 5%; }
@@ -115,18 +164,23 @@ header {
         color: #d2cfd0;
         font-size: .8rem; }
       #listings .inside .search-wrapper .results-wrapper .sort-options {
-        width: 175px;
+        width: 190px;
         display: flex;
         justify-content: space-between; }
         #listings .inside .search-wrapper .results-wrapper .sort-options select {
-          background: transparent;
-          font-size: .8rem;
+          appearance: none;
+          background: url(../images/chevron-down.png) no-repeat 95% center;
+          background-size: 12px;
+          padding: 8px;
+          width: 130px;
+          font-size: .7rem;
           font-weight: 700;
           color: #ADA8AA;
           outline: none;
           border-color: #ebeaea; }
         #listings .inside .search-wrapper .results-wrapper .sort-options i.fa {
-          color: #dedddd; }
+          color: #dedddd;
+          line-height: 31px; }
           #listings .inside .search-wrapper .results-wrapper .sort-options i.fa.fa-th {
             color: #7b7477; }
     #listings .inside .listing-wrapper {

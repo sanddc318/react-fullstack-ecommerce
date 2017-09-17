@@ -28,8 +28,8 @@ class Listings extends Component {
                   <option value="price-desc">Highest Price</option>
                 </select>
 
-                <i className="fa fa-list" aria-hidden="true" />
-                <i className="fa fa-th" aria-hidden="true" />
+                <i className="fa fa-list fa-lg" aria-hidden="true" />
+                <i className="fa fa-th fa-lg" aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ class Listings extends Component {
                 <div className="top-row">
                   <span>
                     <i className="fa fa-wrench" aria-hidden="true" />
-                    288 m&sup2;
+                    944 ft&sup2;
                   </span>
                   <span>
                     <i className="fa fa-bed" aria-hidden="true" />
@@ -108,7 +108,7 @@ class Listings extends Component {
                 <div className="top-row">
                   <span>
                     <i className="fa fa-wrench" aria-hidden="true" />
-                    288 m&sup2;
+                    944 ft&sup2;
                   </span>
                   <span>
                     <i className="fa fa-bed" aria-hidden="true" />
@@ -159,7 +159,7 @@ class Listings extends Component {
                 <div className="top-row">
                   <span>
                     <i className="fa fa-wrench" aria-hidden="true" />
-                    288 m&sup2;
+                    944 ft&sup2;
                   </span>
                   <span>
                     <i className="fa fa-bed" aria-hidden="true" />
@@ -210,7 +210,7 @@ class Listings extends Component {
                 <div className="top-row">
                   <span>
                     <i className="fa fa-wrench" aria-hidden="true" />
-                    288 m&sup2;
+                    944 ft&sup2;
                   </span>
                   <span>
                     <i className="fa fa-bed" aria-hidden="true" />
