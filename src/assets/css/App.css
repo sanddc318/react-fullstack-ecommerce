@@ -33,7 +33,7 @@ header {
           border-radius: 5px; }
 
 #content-area {
-  height: 1050px; }
+  max-height: 1220px; }
 
 #filter {
   display: inline-block;
@@ -44,8 +44,8 @@ header {
   height: 100%; }
   #filter .inside {
     padding: 20px 0;
-    max-width: 60%;
-    margin: 0 10% 0 auto; }
+    max-width: 62%;
+    margin: 0 5% 0 auto; }
     #filter .inside h4 {
       margin: 0 0 25px 0;
       text-transform: uppercase;
@@ -144,8 +144,8 @@ header {
   width: 69.8%;
   height: 100%; }
   #listings .inside {
-    width: 80%;
-    margin: 20px auto 0 5%; }
+    width: 84%;
+    margin: 20px auto 0 2%; }
     #listings .inside .search-wrapper input[type='text'] {
       width: 100%;
       outline: none;
@@ -186,6 +186,9 @@ header {
     #listings .inside .listing-wrapper {
       display: inline-block;
       width: 30.33%;
+      -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       margin: 0 1.5% 30px 1.5%;
@@ -268,3 +271,30 @@ header {
           color: #d2cfd0; }
           #listings .inside .listing-wrapper .listing-details .location i.fa {
             margin-right: 5px; }
+
+#pagination-wrapper {
+  text-align: center; }
+  #pagination-wrapper .pages {
+    -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    background: #FFFEFF;
+    display: inline-block; }
+    #pagination-wrapper .pages li {
+      display: inline-block;
+      font-size: .7rem;
+      padding: 5px 8px;
+      margin: 10px 15px; }
+      #pagination-wrapper .pages li.nav-li {
+        color: #3498db;
+        cursor: pointer; }
+      #pagination-wrapper .pages li:hover:not(.nav-li):not(.nav-elipses) {
+        background-color: #F5678D;
+        color: #FFFEFF;
+        border-radius: 50%;
+        cursor: pointer; }
+      #pagination-wrapper .pages li.active {
+        background-color: #F5678D;
+        color: #FFFEFF;
+        border-radius: 50%; }

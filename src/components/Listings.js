@@ -236,18 +236,21 @@ class Listings extends Component {
               </span>
             </section>
           </div>
-        </div>
 
-        <div className="pagination-wrapper">
-          <ul className="pagination-nums">
-            <li>Prev</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>Next</li>
-          </ul>
-        </div>
+          <div id="pagination-wrapper">
+            <ul className="pages">
+              <li className="nav-li">prev</li>
+              <li className="active">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li className="nav-elipses">...</li>
+              <li>30</li>
+              <li className="nav-li">next</li>
+            </ul>
+          </div>
+        </div>{' '}
+        {/* /.inside */}
       </section>
     )
   }
