@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 class Header extends Component {
   loginStatus() {
@@ -23,7 +23,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log(this.props.auth)
     return (
       <header>
         <div className="nav-wrapper">
@@ -32,8 +31,22 @@ class Header extends Component {
           </div>
 
           <nav>
-            {this.props.auth ? <a href="#">Create Ads</a> : ''}
+            {this.props.auth ? <a href="">Create Ads</a> : ''}
+
             <a href="/dashboard">Search</a>
+
+            <small>{this.props.auth ? this.props.auth.name : ''}</small>
+
+            {this.props.auth ? (
+              <img
+                src={this.props.auth.avatar}
+                alt="Avatar"
+                className="avatar"
+              />
+            ) : (
+              ''
+            )}
+
             {this.loginStatus()}
           </nav>
         </div>

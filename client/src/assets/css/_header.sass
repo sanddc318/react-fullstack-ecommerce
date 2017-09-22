@@ -4,20 +4,23 @@ header
   background-color: $darkpurple
   color: $white
   overflow: auto
-  padding: 20px 0
+  padding: 15px 0
 
   .nav-wrapper
     margin: 0 auto
     width: 80%
+    display: flex
+    justify-content: space-between
+    align-items: center
 
     .logo
-      float: left
       a
         color: $white
         text-decoration: none
 
     nav
-      float: right
+      display: flex
+      align-items: center
       a
         color: $white
         text-decoration: none
@@ -35,7 +38,18 @@ header
           background: -o-linear-gradient($lightpink, $pink)
           background: -moz-linear-gradient($lightpink, $pink)
           background: linear-gradient($lightpink, $pink)
+          margin-left: 10px
           padding: 10px 30px
           text-align: center
           color: $white
           border-radius: 5px
+
+      small, .avatar
+        margin-right: 10px
+
+      small
+        color: $offwhite
+
+      .avatar
+        height: 25px
+        border-radius: 50%

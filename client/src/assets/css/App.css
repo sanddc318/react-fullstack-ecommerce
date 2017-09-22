@@ -2,17 +2,19 @@ header {
   background-color: #0C002B;
   color: #FFFEFF;
   overflow: auto;
-  padding: 20px 0; }
+  padding: 15px 0; }
   header .nav-wrapper {
     margin: 0 auto;
-    width: 80%; }
-    header .nav-wrapper .logo {
-      float: left; }
-      header .nav-wrapper .logo a {
-        color: #FFFEFF;
-        text-decoration: none; }
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .nav-wrapper .logo a {
+      color: #FFFEFF;
+      text-decoration: none; }
     header .nav-wrapper nav {
-      float: right; }
+      display: flex;
+      align-items: center; }
       header .nav-wrapper nav a {
         color: #FFFEFF;
         text-decoration: none;
@@ -30,10 +32,18 @@ header {
           background: -o-linear-gradient(#FF7E85, #F5678D);
           background: -moz-linear-gradient(#FF7E85, #F5678D);
           background: linear-gradient(#FF7E85, #F5678D);
+          margin-left: 10px;
           padding: 10px 30px;
           text-align: center;
           color: #FFFEFF;
           border-radius: 5px; }
+      header .nav-wrapper nav small, header .nav-wrapper nav .avatar {
+        margin-right: 10px; }
+      header .nav-wrapper nav small {
+        color: #FAF7F5; }
+      header .nav-wrapper nav .avatar {
+        height: 25px;
+        border-radius: 50%; }
 
 #content-area {
   max-height: 1220px; }
