@@ -70,7 +70,7 @@ class Listings extends Component {
                     <i className="fa fa-th-large" aria-hidden="true" />7
                     bedrooms
                   </span>
-                  <a href="#">view more</a>
+                  <a>view more</a>
                 </div>
               </div>
             </section>
@@ -121,7 +121,7 @@ class Listings extends Component {
                     <i className="fa fa-th-large" aria-hidden="true" />7
                     bedrooms
                   </span>
-                  <a href="#">view more</a>
+                  <a>view more</a>
                 </div>
               </div>
             </section>
@@ -172,7 +172,7 @@ class Listings extends Component {
                     <i className="fa fa-th-large" aria-hidden="true" />7
                     bedrooms
                   </span>
-                  <a href="#">view more</a>
+                  <a>view more</a>
                 </div>
               </div>
             </section>
@@ -223,7 +223,7 @@ class Listings extends Component {
                     <i className="fa fa-th-large" aria-hidden="true" />7
                     bedrooms
                   </span>
-                  <a href="#">view more</a>
+                  <a>view more</a>
                 </div>
               </div>
             </section>

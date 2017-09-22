@@ -14,10 +14,10 @@ class Header extends Component {
           <div className="logo">Logo</div>
 
           <nav>
-            <a href="#">Create Ads</a>
-            <a href="#">About Us</a>
-            <a href="#">Login</a>
-            <a href="#" className="register-button">
+            <a>Create Ads</a>
+            <a>About Us</a>
+            <a>Login</a>
+            <a href="/auth/google" className="register-button">
               Register
             </a>
           </nav>

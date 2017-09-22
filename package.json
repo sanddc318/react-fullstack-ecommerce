@@ -1,20 +1,31 @@
 {
-  "name": "test",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "font-awesome": "^4.7.0",
-    "node-sass-chokidar": "0.0.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.13"
-  },
+  "name": "react-fullstack-real-estate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm run start --prefix client",
+    "dev": " concurrently \"npm run server\" \"npm run client\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanddc318/react-fullstack-ecommerce.git"
+  },
+  "keywords": [],
+  "author": "Dontavious Sanders <sanddc318@gmail.com> (http://thesandblog.com)",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "cookie-session": "^1.3.1",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/sanddc318/react-fullstack-ecommerce/issues"
+  },
+  "homepage": "https://github.com/sanddc318/react-fullstack-ecommerce#readme"
 }
