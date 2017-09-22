@@ -8,6 +8,9 @@ header {
     width: 80%; }
     header .nav-wrapper .logo {
       float: left; }
+      header .nav-wrapper .logo a {
+        color: #FFFEFF;
+        text-decoration: none; }
     header .nav-wrapper nav {
       float: right; }
       header .nav-wrapper nav a {
