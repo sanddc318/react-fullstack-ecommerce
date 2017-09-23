@@ -97,6 +97,9 @@ header {
       font-size: .8rem;
       color: #ADA8AA;
       outline: none; }
+      #filter .inside .sliders input[type='text']::placeholder {
+        color: #dedddd;
+        font-weight: 100; }
     #filter .inside .sliders.price {
       margin-top: 45px; }
     #filter .inside .sliders.radius {

@@ -17,10 +17,29 @@ class App extends Component {
     this.state = {
       listingsData
     }
+
+    this.updateFilter = this.updateFilter.bind(this)
   }
 
   componentDidMount() {
     this.props.fetchUser()
+  }
+
+  updateFilter(event) {
+    let name = event.target.name
+    let value =
+      event.target.type === 'checkbox'
+        ? event.target.checked
+        : event.target.value
+
+    this.setState(
+      {
+        [name]: value
+      },
+      () => {
+        console.log(this.state)
+      }
+    )
   }
 
   render() {
@@ -31,7 +50,11 @@ class App extends Component {
 
           <main id="content-area">
             <Route exact path="/" component={Landing} />
-            <Route exact path="/dashboard" component={Filter} />
+            <Route
+              exact
+              path="/dashboard"
+              render={() => <Filter updateFilter={this.updateFilter} />}
+            />
             <Route
               exact
               path="/dashboard"
