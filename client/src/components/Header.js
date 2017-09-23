@@ -27,7 +27,7 @@ class Header extends Component {
       <header>
         <div className="nav-wrapper">
           <div className="logo">
-            <a href="/">adCar</a>
+            <a href="/">nHouse</a>
           </div>
 
           <nav>

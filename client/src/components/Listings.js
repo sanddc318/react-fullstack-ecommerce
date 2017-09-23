@@ -1,15 +1,68 @@
 import React, { Component } from 'react'
-import house1 from '../assets/images/house-1.png'
-import house2 from '../assets/images/house-2.png'
-import house3 from '../assets/images/house-3.png'
-import house4 from '../assets/images/house-4.png'
 import avatar from '../assets/images/user-avatar.png'
 
 class Listings extends Component {
   constructor() {
     super()
 
-    this.state = {}
+    this.loopListings = this.loopListings.bind(this)
+  }
+
+  loopListings() {
+    const { listings } = this.props
+
+    return listings.map((listing, index) => {
+      return (
+        <div className="listing-wrapper" key={index}>
+          <section className="listing-image">
+            <span>{listing.address}</span>
+            <img src={listing.image} alt="House" />
+          </section>
+
+          <section className="listing-hover-detail">
+            <div className="user-details">
+              <div className="user-pic">
+                <img src={avatar} alt="User avatar" />
+              </div>
+
+              <div className="user-info">
+                <span className="user-name">Nina Smith</span>
+                <span className="post-date">Posted on 09/14/17</span>
+              </div>
+            </div>
+
+            <div className="listing-hover-info">
+              <div className="top-row">
+                <span>
+                  <i className="fa fa-wrench" aria-hidden="true" />
+                  {listing.floorSpace} ft&sup2;
+                </span>
+                <span>
+                  <i className="fa fa-bed" aria-hidden="true" />
+                  {listing.furnished ? 'Furnished' : 'Unfurnished'}
+                </span>
+              </div>
+
+              <div className="bottom-row">
+                <span>
+                  <i className="fa fa-th-large" aria-hidden="true" />
+                  {listing.bedrooms} bedrooms
+                </span>
+                <a>view more</a>
+              </div>
+            </div>
+          </section>
+
+          <section className="listing-details">
+            <span className="price">${listing.price} /month</span>
+            <span className="location">
+              <i className="fa fa-map-marker" aria-hidden="true" />
+              {listing.city}, {listing.state}
+            </span>
+          </section>
+        </div>
+      )
+    })
   }
 
   render() {
@@ -34,208 +87,7 @@ class Listings extends Component {
             </div>
           </div>
 
-          {/* LISTING 1 */}
-          <div className="listing-wrapper">
-            <section className="listing-image">
-              <span>302 Mercer Drive</span>
-              <img src={house1} alt="House" />
-            </section>
-
-            <section className="listing-hover-detail">
-              <div className="user-details">
-                <div className="user-pic">
-                  <img src={avatar} alt="User avatar" />
-                </div>
-
-                <div className="user-info">
-                  <span className="user-name">Nina Smith</span>
-                  <span className="post-date">Posted on 09/14/17</span>
-                </div>
-              </div>
-
-              <div className="listing-hover-info">
-                <div className="top-row">
-                  <span>
-                    <i className="fa fa-wrench" aria-hidden="true" />
-                    944 ft&sup2;
-                  </span>
-                  <span>
-                    <i className="fa fa-bed" aria-hidden="true" />
-                    Unfurnished
-                  </span>
-                </div>
-
-                <div className="bottom-row">
-                  <span>
-                    <i className="fa fa-th-large" aria-hidden="true" />7
-                    bedrooms
-                  </span>
-                  <a>view more</a>
-                </div>
-              </div>
-            </section>
-
-            <section className="listing-details">
-              <span className="price">$900 /month</span>
-              <span className="location">
-                <i className="fa fa-map-marker" aria-hidden="true" />
-                Doublegate
-              </span>
-            </section>
-          </div>
-
-          {/* LISTING 2 */}
-          <div className="listing-wrapper">
-            <section className="listing-image">
-              <span>302 Mercer Drive</span>
-              <img src={house2} alt="House" />
-            </section>
-
-            <section className="listing-hover-detail">
-              <div className="user-details">
-                <div className="user-pic">
-                  <img src={avatar} alt="User avatar" />
-                </div>
-
-                <div className="user-info">
-                  <span className="user-name">Nina Smith</span>
-                  <span>Posted on </span>
-                  <span className="post-date">09/14/17</span>
-                </div>
-              </div>
-
-              <div className="listing-hover-info">
-                <div className="top-row">
-                  <span>
-                    <i className="fa fa-wrench" aria-hidden="true" />
-                    944 ft&sup2;
-                  </span>
-                  <span>
-                    <i className="fa fa-bed" aria-hidden="true" />
-                    Unfurnished
-                  </span>
-                </div>
-
-                <div className="bottom-row">
-                  <span>
-                    <i className="fa fa-th-large" aria-hidden="true" />7
-                    bedrooms
-                  </span>
-                  <a>view more</a>
-                </div>
-              </div>
-            </section>
-
-            <section className="listing-details">
-              <span className="price">$900 /month</span>
-              <span className="location">
-                <i className="fa fa-map-marker fa-lg" aria-hidden="true" />
-                Doublegate
-              </span>
-            </section>
-          </div>
-
-          {/* LISTING 3 */}
-          <div className="listing-wrapper">
-            <section className="listing-image">
-              <span>302 Mercer Drive</span>
-              <img src={house3} alt="House" />
-            </section>
-
-            <section className="listing-hover-detail">
-              <div className="user-details">
-                <div className="user-pic">
-                  <img src={avatar} alt="User avatar" />
-                </div>
-
-                <div className="user-info">
-                  <span className="user-name">Nina Smith</span>
-                  <span>Posted on </span>
-                  <span className="post-date">09/14/17</span>
-                </div>
-              </div>
-
-              <div className="listing-hover-info">
-                <div className="top-row">
-                  <span>
-                    <i className="fa fa-wrench" aria-hidden="true" />
-                    944 ft&sup2;
-                  </span>
-                  <span>
-                    <i className="fa fa-bed" aria-hidden="true" />
-                    Unfurnished
-                  </span>
-                </div>
-
-                <div className="bottom-row">
-                  <span>
-                    <i className="fa fa-th-large" aria-hidden="true" />7
-                    bedrooms
-                  </span>
-                  <a>view more</a>
-                </div>
-              </div>
-            </section>
-
-            <section className="listing-details">
-              <span className="price">$900 /month</span>
-              <span className="location">
-                <i className="fa fa-map-marker" aria-hidden="true" />
-                Doublegate
-              </span>
-            </section>
-          </div>
-
-          {/* LISTING 4 */}
-          <div className="listing-wrapper">
-            <section className="listing-image">
-              <span>302 Mercer Drive</span>
-              <img src={house4} alt="House" />
-            </section>
-
-            <section className="listing-hover-detail">
-              <div className="user-details">
-                <div className="user-pic">
-                  <img src={avatar} alt="User avatar" />
-                </div>
-
-                <div className="user-info">
-                  <span className="user-name">Nina Smith</span>
-                  <span>Posted on </span>
-                  <span className="post-date">09/14/17</span>
-                </div>
-              </div>
-
-              <div className="listing-hover-info">
-                <div className="top-row">
-                  <span>
-                    <i className="fa fa-wrench" aria-hidden="true" />
-                    944 ft&sup2;
-                  </span>
-                  <span>
-                    <i className="fa fa-bed" aria-hidden="true" />
-                    Unfurnished
-                  </span>
-                </div>
-
-                <div className="bottom-row">
-                  <span>
-                    <i className="fa fa-th-large" aria-hidden="true" />7
-                    bedrooms
-                  </span>
-                  <a>view more</a>
-                </div>
-              </div>
-            </section>
-
-            <section className="listing-details">
-              <span className="price">$900 /month</span>
-              <span className="location">
-                <i className="fa fa-map-marker" aria-hidden="true" />
-                Doublegate
-              </span>
-            </section>
-          </div>
+          {this.loopListings()}
 
           <div id="pagination-wrapper">
             <ul className="pages">
