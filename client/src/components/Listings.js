@@ -38,7 +38,7 @@ class Listings extends Component {
               <div className="top-row">
                 <span>
                   <i className="fa fa-wrench" aria-hidden="true" />
-                  {listing.floorSpace} ft&sup2;
+                  {listing.floorspace} ft&sup2;
                 </span>
                 <span>
                   <i className="fa fa-bed" aria-hidden="true" />

@@ -20,7 +20,10 @@ class App extends Component {
       min_price: 0,
       max_price: 1000000,
       min_floorspace: 0,
-      max_floorspace: 60000
+      max_floorspace: 60000,
+      city: 'all',
+      homeType: 'all',
+      bedrooms: 0
     }
 
     this.updateFilter = this.updateFilter.bind(this)
@@ -58,9 +61,22 @@ class App extends Component {
         item.price >= this.state.min_price &&
         item.price <= this.state.max_price &&
         item.floorspace >= this.state.min_floorspace &&
-        item.floorspace <= this.state.max_floorspace
+        item.floorspace <= this.state.max_floorspace &&
+        item.bedrooms >= this.state.bedrooms
       )
     })
+
+    if (this.state.city !== 'all') {
+      query = query.filter(item => {
+        return item.city === this.state.city
+      })
+    }
+
+    if (this.state.homeType !== 'all') {
+      query = query.filter(item => {
+        return item.homeType === this.state.homeType
+      })
+    }
 
     this.setState({
       filterData: query
