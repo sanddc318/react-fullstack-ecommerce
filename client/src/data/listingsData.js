@@ -40,7 +40,7 @@ const listingsData = [
   {
     address: '590 Maple Avenue',
     city: 'Savage',
-    state: 'PR',
+    state: 'TX',
     bedrooms: 5,
     price: 2175,
     floorspace: 1261,
@@ -48,6 +48,84 @@ const listingsData = [
     homeType: 'Ranch',
     image:
       'http://www.oldhousevillage.com/wp-content/uploads/2016/02/old-house-hotel-exterior.jpg',
+    furnished: false
+  },
+  {
+    address: '489 Adler Place, , , 5691',
+    city: 'Kenmar',
+    state: 'GA',
+    bedrooms: 2,
+    price: 184458,
+    floorspace: 1123,
+    extras: ['fireplace', 'elevator'],
+    homeType: 'Ranch',
+    image:
+      'http://www.impressiveinteriordesign.com/wp-content/uploads/2012/09/Beach-House-Interior-And-Exterior-Design-Ideas-To-Inspire-You-1-1.jpg',
+    furnished: false
+  },
+  {
+    address: '824 Bijou Avenue',
+    city: 'Yettem',
+    state: 'NY',
+    bedrooms: 1,
+    price: 299171,
+    floorspace: 1527,
+    extras: ['fireplace', 'elevator'],
+    homeType: 'Ranch',
+    image:
+      'http://hbu.h-cdn.co/assets/15/41/980x490/gallery-1444089020-gallery-1443802979-sf-kitchen.jpg',
+    furnished: false
+  },
+  {
+    address: '834 Poplar Street',
+    city: 'Felt',
+    state: 'KY',
+    bedrooms: 2,
+    price: 287563,
+    floorspace: 1420,
+    extras: ['fireplace', 'elevator'],
+    homeType: 'Ranch',
+    image:
+      'http://www.impressiveinteriordesign.com/wp-content/uploads/2012/09/Beach-House-Interior-And-Exterior-Design-Ideas-To-Inspire-You-1-2.jpg',
+    furnished: false
+  },
+  {
+    address: '387 Norman Avenue',
+    city: 'Topanga',
+    state: 'TX',
+    bedrooms: 5,
+    price: 185689,
+    floorspace: 1580,
+    extras: ['fireplace', 'elevator'],
+    homeType: 'Ranch',
+    image:
+      'http://www.impressiveinteriordesign.com/wp-content/uploads/2015/05/Modern-House-Interior-Design-Ideas-4.jpg',
+    furnished: false
+  },
+  {
+    address: '416 Troy Avenue',
+    city: 'Nutrioso',
+    state: 'NY',
+    bedrooms: 5,
+    price: 268402,
+    floorspace: 1494,
+    extras: ['fireplace', 'elevator'],
+    homeType: 'Ranch',
+    image:
+      'http://www.smithhereblog.com/wp-content/uploads/2017/07/Small-House-Interior-Design-Sample-1.jpg',
+    furnished: false
+  },
+  {
+    address: '837 Greenwood Avenue',
+    city: 'Riviera',
+    state: 'TN',
+    bedrooms: 5,
+    price: 253224,
+    floorspace: 1783,
+    extras: ['fireplace', 'elevator'],
+    homeType: 'Ranch',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9NMEeoPqtQHY8_WCo50vRxg9i3iTw-ZEdzjnfWebfw7lVNZk',
     furnished: false
   }
 ]

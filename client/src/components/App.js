@@ -17,6 +17,7 @@ class App extends Component {
     this.state = {
       listingsData,
       filterData: listingsData,
+      formData: [],
       min_price: 0,
       max_price: 1000000,
       min_floorspace: 0,
@@ -28,6 +29,7 @@ class App extends Component {
 
     this.updateFilter = this.updateFilter.bind(this)
     this.filterData = this.filterData.bind(this)
+    this.populateSelects = this.populateSelects.bind(this)
   }
 
   componentDidMount() {
@@ -46,7 +48,6 @@ class App extends Component {
         [name]: value
       },
       () => {
-        console.log(this.state)
         {
           /* TODO: fire on submit */
         }
@@ -83,6 +84,34 @@ class App extends Component {
     })
   }
 
+  populateSelects() {
+    let cities = this.state.listingsData.map(item => {
+      return item.city
+    })
+    cities = new Set(cities)
+    cities = [...cities]
+
+    let homeTypes = this.state.listingsData.map(item => {
+      return item.homeType
+    })
+    homeTypes = new Set(homeTypes)
+    homeTypes = [...homeTypes]
+
+    let bedrooms = this.state.listingsData.map(item => {
+      return item.bedrooms
+    })
+    bedrooms = new Set(bedrooms)
+    bedrooms = [...bedrooms]
+
+    this.setState({
+      formData: {
+        cities,
+        homeTypes,
+        bedrooms
+      }
+    })
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -94,7 +123,13 @@ class App extends Component {
             <Route
               exact
               path="/dashboard"
-              render={() => <Filter updateFilter={this.updateFilter} />}
+              render={() => (
+                <Filter
+                  globalState={this.state}
+                  updateFilter={this.updateFilter}
+                  populateSelects={this.populateSelects}
+                />
+              )}
             />
             <Route
               exact

@@ -4,7 +4,55 @@ class Filter extends Component {
   constructor() {
     super()
 
-    this.state = {}
+    this.cities = this.cities.bind(this)
+    this.homeTypes = this.homeTypes.bind(this)
+    this.bedrooms = this.bedrooms.bind(this)
+  }
+
+  componentWillMount() {
+    this.props.populateSelects()
+  }
+
+  cities() {
+    let { cities } = this.props.globalState.formData
+
+    if (cities !== undefined) {
+      return cities.map((item, index) => {
+        return (
+          <option value={item} key={index}>
+            {item}
+          </option>
+        )
+      })
+    }
+  }
+
+  homeTypes() {
+    let { homeTypes } = this.props.globalState.formData
+
+    if (homeTypes !== undefined) {
+      return homeTypes.map((item, index) => {
+        return (
+          <option value={item} key={index}>
+            {item}
+          </option>
+        )
+      })
+    }
+  }
+
+  bedrooms() {
+    let { bedrooms } = this.props.globalState.formData
+
+    if (bedrooms !== undefined) {
+      return bedrooms.map((item, index) => {
+        return (
+          <option value={item} key={index}>
+            {item}+
+          </option>
+        )
+      })
+    }
   }
 
   render() {
@@ -18,11 +66,8 @@ class Filter extends Component {
             className="dropdown-filter"
             onChange={this.props.updateFilter}
           >
-            <option value="all">City</option>
-            <option>Omar</option>
-            <option>Hebron</option>
-            <option>Vandiver</option>
-            <option>Savage</option>
+            <option value="all">Cities</option>
+            {this.cities()}
           </select>
 
           <select
@@ -31,11 +76,7 @@ class Filter extends Component {
             onChange={this.props.updateFilter}
           >
             <option value="all">Type of home</option>
-            <option>Apartment</option>
-            <option>Duplex</option>
-            <option>House</option>
-            <option>Ranch</option>
-            <option>Condominium</option>
+            {this.homeTypes()}
           </select>
 
           <select
@@ -44,11 +85,7 @@ class Filter extends Component {
             onChange={this.props.updateFilter}
           >
             <option value="0">Number of bedrooms</option>
-            <option value="1">1+</option>
-            <option value="2">2+</option>
-            <option value="3">3+</option>
-            <option value="4">4+</option>
-            <option value="5">5+</option>
+            {this.bedrooms()}
           </select>
 
           {/* SLIDERS */}
