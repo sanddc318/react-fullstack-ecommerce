@@ -53,58 +53,61 @@ class Filter extends Component {
 
           {/* SLIDERS */}
           <div className="sliders price">
-            <span className="title">Price</span>
+            <span className="title">
+              Price <small>$</small>
+            </span>
             <input
               type="text"
               name="min_price"
               className="min-price"
-              placeholder="$200"
+              placeholder="200"
               onChange={this.props.updateFilter}
             />
-
             <input
               type="text"
               name="max_price"
               className="max-price"
-              placeholder="$3000"
+              placeholder="3000"
               onChange={this.props.updateFilter}
             />
           </div>
 
           <div className="sliders floor-space">
-            <span className="title">Floor Space</span>
+            <span className="title">
+              Floor Space <small>ft</small>
+            </span>
             <input
               type="text"
-              name="min_floor_space"
-              className="min-floor-space"
-              placeholder="295 ft"
+              name="min_floorspace"
+              className="min-floorspace"
+              placeholder="295"
               onChange={this.props.updateFilter}
             />
-
             <input
               type="text"
-              name="max_floor_space"
-              className="max-floor-space"
-              placeholder="490 ft"
+              name="max_floorspace"
+              className="max-floorspace"
+              placeholder="490"
               onChange={this.props.updateFilter}
             />
           </div>
 
           <div className="sliders radius">
-            <span className="title">Radius</span>
+            <span className="title">
+              Radius <small>km</small>
+            </span>
             <input
               type="text"
               name="min_radius"
               className="min-radius"
-              placeholder="1 km"
+              placeholder="1"
               onChange={this.props.updateFilter}
             />
-
             <input
               type="text"
               name="max_radius"
               className="max-radius"
-              placeholder="50 km"
+              placeholder="50"
               onChange={this.props.updateFilter}
             />
           </div>

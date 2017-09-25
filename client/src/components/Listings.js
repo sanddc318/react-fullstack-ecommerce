@@ -11,6 +11,9 @@ class Listings extends Component {
   loopListings() {
     const { listings } = this.props
 
+    if (listings === undefined || listings.length === 0)
+      return "Sorry, you're filter did not return any results."
+
     return listings.map((listing, index) => {
       return (
         <div className="listing-wrapper" key={index}>
