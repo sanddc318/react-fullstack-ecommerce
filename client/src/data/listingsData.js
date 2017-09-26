@@ -31,7 +31,7 @@ const listingsData = [
     bedrooms: 3,
     price: 2322,
     floorspace: 1680,
-    extras: ['swimming pool', 'gym'],
+    extras: ['elevator'],
     homeType: 'House',
     image:
       'https://media3.s-nbcnews.com/j/newscms/2016_13/1476886/160329-westfield-house-mdl_1b0e43c9c02bafb895427fa62ab1378f.nbcnews-ux-2880-1000.jpg',
@@ -44,20 +44,20 @@ const listingsData = [
     bedrooms: 5,
     price: 2175,
     floorspace: 1261,
-    extras: ['fireplace', 'elevator'],
+    extras: [],
     homeType: 'Ranch',
     image:
       'http://www.oldhousevillage.com/wp-content/uploads/2016/02/old-house-hotel-exterior.jpg',
     furnished: false
   },
   {
-    address: '489 Adler Place, , , 5691',
+    address: '489 Adler Place',
     city: 'Kenmar',
     state: 'GA',
     bedrooms: 2,
     price: 1844,
     floorspace: 1123,
-    extras: ['fireplace', 'elevator'],
+    extras: ['fireplace', 'swimming pool'],
     homeType: 'Ranch',
     image:
       'http://www.impressiveinteriordesign.com/wp-content/uploads/2012/09/Beach-House-Interior-And-Exterior-Design-Ideas-To-Inspire-You-1-1.jpg',
@@ -70,7 +70,7 @@ const listingsData = [
     bedrooms: 1,
     price: 2991,
     floorspace: 1527,
-    extras: ['fireplace', 'elevator'],
+    extras: ['gym', 'elevator'],
     homeType: 'Ranch',
     image:
       'http://hbu.h-cdn.co/assets/15/41/980x490/gallery-1444089020-gallery-1443802979-sf-kitchen.jpg',
@@ -83,7 +83,7 @@ const listingsData = [
     bedrooms: 2,
     price: 2875,
     floorspace: 1420,
-    extras: ['fireplace', 'elevator'],
+    extras: ['fireplace'],
     homeType: 'Ranch',
     image:
       'http://www.impressiveinteriordesign.com/wp-content/uploads/2012/09/Beach-House-Interior-And-Exterior-Design-Ideas-To-Inspire-You-1-2.jpg',
@@ -96,7 +96,7 @@ const listingsData = [
     bedrooms: 5,
     price: 1856,
     floorspace: 1580,
-    extras: ['fireplace', 'elevator'],
+    extras: ['swimming pool'],
     homeType: 'Ranch',
     image:
       'http://www.impressiveinteriordesign.com/wp-content/uploads/2015/05/Modern-House-Interior-Design-Ideas-4.jpg',
@@ -109,7 +109,7 @@ const listingsData = [
     bedrooms: 5,
     price: 2684,
     floorspace: 1494,
-    extras: ['fireplace', 'elevator'],
+    extras: ['gym', 'elevator'],
     homeType: 'Ranch',
     image:
       'http://www.smithhereblog.com/wp-content/uploads/2017/07/Small-House-Interior-Design-Sample-1.jpg',
@@ -122,7 +122,7 @@ const listingsData = [
     bedrooms: 5,
     price: 2532,
     floorspace: 1783,
-    extras: ['fireplace', 'elevator'],
+    extras: ['fireplace', 'swimming pool', 'gym'],
     homeType: 'Ranch',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9NMEeoPqtQHY8_WCo50vRxg9i3iTw-ZEdzjnfWebfw7lVNZk',
