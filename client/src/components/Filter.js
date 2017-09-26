@@ -66,7 +66,7 @@ class Filter extends Component {
             className="dropdown-filter"
             onChange={this.props.updateFilter}
           >
-            <option value="all">Cities</option>
+            <option value="all">City</option>
             {this.cities()}
           </select>
 

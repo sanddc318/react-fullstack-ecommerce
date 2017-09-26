@@ -11,8 +11,13 @@ class Listings extends Component {
   loopListings() {
     const { listings } = this.props
 
-    if (listings === undefined || listings.length === 0)
-      return "Sorry, you're filter did not return any results."
+    if (listings === undefined || listings.length === 0) {
+      return (
+        <div className="no-results">
+          Sorry, you're query did not return any results.
+        </div>
+      )
+    }
 
     return listings.map((listing, index) => {
       return (
@@ -73,7 +78,12 @@ class Listings extends Component {
       <section id="listings">
         <div className="inside">
           <div className="search-wrapper">
-            <input type="text" name="search" placeholder="Enter a city" />
+            <input
+              type="text"
+              name="searchTerm"
+              placeholder="Enter a city"
+              onChange={this.props.updateFilter}
+            />
 
             <div className="results-wrapper">
               <small>390 results found</small>

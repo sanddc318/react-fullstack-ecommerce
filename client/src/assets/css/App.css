@@ -171,7 +171,10 @@ header {
       border: none;
       border-bottom: 1px solid #ebeaea;
       font-size: 1.8rem;
-      font-weight: 300; }
+      font-weight: 300;
+      color: #ADA8AA; }
+      #listings .inside .search-wrapper input[type='text']::placeholder {
+        color: #ADA8AA; }
     #listings .inside .search-wrapper .results-wrapper {
       margin: 25px 0;
       display: flex;
@@ -314,3 +317,8 @@ header {
         background-color: #F5678D;
         color: #FFFEFF;
         border-radius: 50%; }
+
+.no-results {
+  text-align: center;
+  color: #ADA8AA;
+  margin: 50px 0; }

@@ -25,6 +25,7 @@ class App extends Component {
       city: 'all',
       homeType: 'all',
       bedrooms: 0,
+      searchTerm: '',
       sortBy: 'price-asc'
     }
 
@@ -34,9 +35,6 @@ class App extends Component {
   }
 
   componentWillMount() {
-    {
-      /* sort from lowest to highest by default */
-    }
     let listingsData = this.state.listingsData.sort((a, b) => {
       return a.price - b.price
     })
@@ -51,8 +49,8 @@ class App extends Component {
   }
 
   updateFilter(event) {
-    let name = event.target.name
-    let value =
+    const name = event.target.name
+    const value =
       event.target.type === 'checkbox'
         ? event.target.checked
         : event.target.value
@@ -93,12 +91,19 @@ class App extends Component {
       })
     }
 
-    {
-      /* sort from highest to lowest by when 'Highest Price' is selected */
-    }
     if (this.state.sortBy === 'price-desc') {
       query = query.sort((a, b) => {
         return b.price - a.price
+      })
+    }
+
+    if (this.state.searchTerm !== '') {
+      query = query.filter(item => {
+        const city = item.city.toLowerCase()
+        const searchTerm = this.state.searchTerm.toLowerCase()
+        const matches = city.match(searchTerm)
+
+        if (matches !== null) return true
       })
     }
 
