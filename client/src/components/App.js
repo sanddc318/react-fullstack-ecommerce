@@ -24,12 +24,26 @@ class App extends Component {
       max_floorspace: 60000,
       city: 'all',
       homeType: 'all',
-      bedrooms: 0
+      bedrooms: 0,
+      sortBy: 'price-asc'
     }
 
     this.updateFilter = this.updateFilter.bind(this)
     this.filterData = this.filterData.bind(this)
     this.populateSelects = this.populateSelects.bind(this)
+  }
+
+  componentWillMount() {
+    {
+      /* sort from lowest to highest by default */
+    }
+    let listingsData = this.state.listingsData.sort((a, b) => {
+      return a.price - b.price
+    })
+
+    this.setState({
+      listingsData
+    })
   }
 
   componentDidMount() {
@@ -79,6 +93,15 @@ class App extends Component {
       })
     }
 
+    {
+      /* sort from highest to lowest by when 'Highest Price' is selected */
+    }
+    if (this.state.sortBy === 'price-desc') {
+      query = query.sort((a, b) => {
+        return b.price - a.price
+      })
+    }
+
     this.setState({
       filterData: query
     })
@@ -89,19 +112,19 @@ class App extends Component {
       return item.city
     })
     cities = new Set(cities)
-    cities = [...cities]
+    cities = [...cities].sort()
 
     let homeTypes = this.state.listingsData.map(item => {
       return item.homeType
     })
     homeTypes = new Set(homeTypes)
-    homeTypes = [...homeTypes]
+    homeTypes = [...homeTypes].sort()
 
     let bedrooms = this.state.listingsData.map(item => {
       return item.bedrooms
     })
     bedrooms = new Set(bedrooms)
-    bedrooms = [...bedrooms]
+    bedrooms = [...bedrooms].sort()
 
     this.setState({
       formData: {
@@ -134,7 +157,12 @@ class App extends Component {
             <Route
               exact
               path="/dashboard"
-              render={() => <Listings listings={this.state.filterData} />}
+              render={() => (
+                <Listings
+                  listings={this.state.filterData}
+                  updateFilter={this.updateFilter}
+                />
+              )}
             />
           </main>
         </div>

@@ -79,7 +79,11 @@ class Listings extends Component {
               <small>390 results found</small>
 
               <div className="sort-options">
-                <select name="sort-by" className="sort-results">
+                <select
+                  name="sortBy"
+                  className="sort-results"
+                  onChange={this.props.updateFilter}
+                >
                   <option value="price-asc">Lowest Price</option>
                   <option value="price-desc">Highest Price</option>
                 </select>

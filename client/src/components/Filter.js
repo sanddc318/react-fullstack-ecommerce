@@ -9,7 +9,7 @@ class Filter extends Component {
     this.bedrooms = this.bedrooms.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.populateSelects()
   }
 
