@@ -27,16 +27,7 @@ header {
         header .nav-wrapper nav a:not(.register-button) {
           margin-right: 45px; }
         header .nav-wrapper nav a.register-button {
-          background: #F5678D;
-          background: -webkit-linear-gradient(#FF7E85, #F5678D);
-          background: -o-linear-gradient(#FF7E85, #F5678D);
-          background: -moz-linear-gradient(#FF7E85, #F5678D);
-          background: linear-gradient(#FF7E85, #F5678D);
-          margin-left: 10px;
-          padding: 10px 30px;
-          text-align: center;
-          color: #FFFEFF;
-          border-radius: 5px; }
+          margin-left: 10px; }
       header .nav-wrapper nav small, header .nav-wrapper nav .avatar {
         margin-right: 10px; }
       header .nav-wrapper nav small {
@@ -322,3 +313,15 @@ header {
   text-align: center;
   color: #ADA8AA;
   margin: 50px 0; }
+
+.pink {
+  background: #F5678D;
+  background: -webkit-linear-gradient(#FF7E85, #F5678D);
+  background: -o-linear-gradient(#FF7E85, #F5678D);
+  background: -moz-linear-gradient(#FF7E85, #F5678D);
+  background: linear-gradient(#FF7E85, #F5678D);
+  padding: 8px 25px;
+  text-align: center;
+  color: #FFFEFF;
+  border-radius: 5px;
+  cursor: pointer; }

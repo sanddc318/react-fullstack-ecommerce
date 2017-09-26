@@ -86,7 +86,10 @@ class Listings extends Component {
             />
 
             <div className="results-wrapper">
-              <small>390 results found</small>
+              <small>
+                Showing {this.props.listings.length}
+                {this.props.listings.length === 1 ? ' home' : ' homes'}
+              </small>
 
               <div className="sort-options">
                 <select

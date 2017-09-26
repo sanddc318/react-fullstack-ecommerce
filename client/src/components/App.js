@@ -26,6 +26,7 @@ class App extends Component {
       homeType: 'all',
       bedrooms: 0,
       searchTerm: '',
+      searchResults: 0,
       sortBy: 'price-asc'
     }
 
@@ -60,9 +61,6 @@ class App extends Component {
         [name]: value
       },
       () => {
-        {
-          /* TODO: fire on submit */
-        }
         this.filterData()
       }
     )

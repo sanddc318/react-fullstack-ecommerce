@@ -15,7 +15,7 @@ class Header extends Component {
         )
       default:
         return (
-          <a href="/api/logout" className="register-button">
+          <a href="/api/logout" className="register-button pink">
             Logout
           </a>
         )
