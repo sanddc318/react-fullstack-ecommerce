@@ -190,19 +190,21 @@ header {
           border-color: #ebeaea; }
         #listings .inside .search-wrapper .results-wrapper .sort-options i.fa {
           color: #dedddd;
-          line-height: 31px; }
-          #listings .inside .search-wrapper .results-wrapper .sort-options i.fa.fa-th {
+          line-height: 31px;
+          cursor: pointer; }
+          #listings .inside .search-wrapper .results-wrapper .sort-options i.fa.active {
             color: #7b7477; }
     #listings .inside .listing-wrapper {
-      display: inline-block;
-      width: 30.33%;
       -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       -o-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
-      margin: 0 1.5% 30px 1.5%;
       position: relative; }
+      #listings .inside .listing-wrapper.box {
+        display: inline-block;
+        width: 30.33%;
+        margin: 0 1.5% 30px 1.5%; }
       #listings .inside .listing-wrapper .listing-image {
         width: 100%;
         height: 140px;
@@ -281,6 +283,40 @@ header {
           color: #d2cfd0; }
           #listings .inside .listing-wrapper .listing-details .location i.fa {
             margin-right: 5px; }
+      #listings .inside .listing-wrapper.row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 20px; }
+        #listings .inside .listing-wrapper.row .user-details {
+          width: 25%;
+          padding: 10px 0;
+          display: flex; }
+          #listings .inside .listing-wrapper.row .user-details .user-pic, #listings .inside .listing-wrapper.row .user-details .user-info {
+            display: inline-block;
+            float: left; }
+            #listings .inside .listing-wrapper.row .user-details .user-pic img, #listings .inside .listing-wrapper.row .user-details .user-info img {
+              width: 25px;
+              border-radius: 50%;
+              border: 1px solid #FFFEFF;
+              margin-right: 10px; }
+          #listings .inside .listing-wrapper.row .user-details .user-info span.user-name, #listings .inside .listing-wrapper.row .user-details .user-info span.post-date {
+            display: block;
+            font-size: .7rem; }
+          #listings .inside .listing-wrapper.row .user-details .user-info span.post-date {
+            color: #d2cfd0; }
+        #listings .inside .listing-wrapper.row .listing-details {
+          padding: 10px; }
+          #listings .inside .listing-wrapper.row .listing-details span {
+            display: block;
+            font-size: .8rem; }
+          #listings .inside .listing-wrapper.row .listing-details .price {
+            color: #d2cfd0; }
+        #listings .inside .listing-wrapper.row .view-more {
+          padding: 10px; }
+          #listings .inside .listing-wrapper.row .view-more a {
+            font-size: .7rem;
+            text-decoration: none; }
 
 #pagination-wrapper {
   text-align: center; }

@@ -27,12 +27,14 @@ class App extends Component {
       bedrooms: 0,
       searchTerm: '',
       searchResults: 0,
-      sortBy: 'price-asc'
+      sortBy: 'price-asc',
+      view: 'box'
     }
 
     this.updateFilter = this.updateFilter.bind(this)
     this.filterData = this.filterData.bind(this)
     this.populateSelects = this.populateSelects.bind(this)
+    this.changeView = this.changeView.bind(this)
   }
 
   componentWillMount() {
@@ -138,6 +140,12 @@ class App extends Component {
     })
   }
 
+  changeView(style) {
+    this.setState({
+      view: style
+    })
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -162,8 +170,10 @@ class App extends Component {
               path="/dashboard"
               render={() => (
                 <Listings
+                  globalState={this.state}
                   listings={this.state.filterData}
                   updateFilter={this.updateFilter}
+                  changeView={this.changeView}
                 />
               )}
             />

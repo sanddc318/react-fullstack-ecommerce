@@ -177,19 +177,21 @@
           i.fa
             color: lighten($gray, 20%)
             line-height: 31px
-            &.fa-th
+            cursor: pointer
+            &.active
               color: darken($gray, 20%)
 
     .listing-wrapper
-      display: inline-block
-      width: 30.33%
       -webkit-box-shadow: 0 3px 12px rgba(0,0,0,0.1)
       -moz-box-shadow: 0 3px 12px rgba(0,0,0,0.1)
       -o-box-shadow: 0 3px 12px rgba(0,0,0,0.1)
       box-shadow: 0 3px 12px rgba(0,0,0,0.1)
       border-radius: 5px
-      margin: 0 1.5% 30px 1.5%
       position: relative
+      &.box
+        display: inline-block
+        width: 30.33%
+        margin: 0 1.5% 30px 1.5%
 
       .listing-image
         width: 100%
@@ -289,6 +291,52 @@
 
           i.fa
             margin-right: 5px
+
+      &.row
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin-bottom: 20px
+
+        .user-details
+          width: 25%
+          padding: 10px 0
+          display: flex
+
+          .user-pic, .user-info
+            display: inline-block
+            float: left
+
+            img
+              width: 25px
+              border-radius: 50%
+              border: 1px solid $white
+              margin-right: 10px
+
+          .user-info
+            span.user-name, span.post-date
+              display: block
+              font-size: .7rem
+
+            span.post-date
+              color: lighten($gray, 15%)
+
+        .listing-details
+          padding: 10px
+
+          span
+            display: block
+            font-size: .8rem
+
+          .price
+            color: lighten($gray, 15%)
+
+        .view-more
+          padding: 10px
+
+          a
+            font-size: .7rem
+            text-decoration: none
 
 #pagination-wrapper
   text-align: center

@@ -20,53 +20,79 @@ class Listings extends Component {
     }
 
     return listings.map((listing, index) => {
+      if (this.props.globalState.view === 'box') {
+        return (
+          <div className="listing-wrapper box" key={index}>
+            <section className="listing-image">
+              <span>{listing.address}</span>
+              <img src={listing.image} alt="House" />
+            </section>
+
+            <section className="listing-hover-detail">
+              <div className="user-details">
+                <div className="user-pic">
+                  <img src={avatar} alt="User avatar" />
+                </div>
+
+                <div className="user-info">
+                  <span className="user-name">Nina Smith</span>
+                  <span className="post-date">Posted on 09/14/17</span>
+                </div>
+              </div>
+
+              <div className="listing-hover-info">
+                <div className="top-row">
+                  <span>
+                    <i className="fa fa-wrench" aria-hidden="true" />
+                    {listing.floorspace} ft&sup2;
+                  </span>
+                  <span>
+                    <i className="fa fa-bed" aria-hidden="true" />
+                    {listing.furnished ? 'Furnished' : 'Unfurnished'}
+                  </span>
+                </div>
+
+                <div className="bottom-row">
+                  <span>
+                    <i className="fa fa-th-large" aria-hidden="true" />
+                    {listing.bedrooms} bedrooms
+                  </span>
+                  <a>view more</a>
+                </div>
+              </div>
+            </section>
+
+            <section className="listing-details">
+              <span className="price">${listing.price} /month</span>
+              <span className="location">
+                <i className="fa fa-map-marker" aria-hidden="true" />
+                {listing.city}, {listing.state}
+              </span>
+            </section>
+          </div>
+        )
+      }
+
       return (
-        <div className="listing-wrapper" key={index}>
-          <section className="listing-image">
-            <span>{listing.address}</span>
-            <img src={listing.image} alt="House" />
-          </section>
-
-          <section className="listing-hover-detail">
-            <div className="user-details">
-              <div className="user-pic">
-                <img src={avatar} alt="User avatar" />
-              </div>
-
-              <div className="user-info">
-                <span className="user-name">Nina Smith</span>
-                <span className="post-date">Posted on 09/14/17</span>
-              </div>
+        <div className="listing-wrapper row" key={index}>
+          <section className="user-details">
+            <div className="user-pic">
+              <img src={avatar} alt="User avatar" />
             </div>
 
-            <div className="listing-hover-info">
-              <div className="top-row">
-                <span>
-                  <i className="fa fa-wrench" aria-hidden="true" />
-                  {listing.floorspace} ft&sup2;
-                </span>
-                <span>
-                  <i className="fa fa-bed" aria-hidden="true" />
-                  {listing.furnished ? 'Furnished' : 'Unfurnished'}
-                </span>
-              </div>
-
-              <div className="bottom-row">
-                <span>
-                  <i className="fa fa-th-large" aria-hidden="true" />
-                  {listing.bedrooms} bedrooms
-                </span>
-                <a>view more</a>
-              </div>
+            <div className="user-info">
+              <span className="user-name">Nina Smith</span>
+              <span className="post-date">Posted on 09/14/17</span>
             </div>
           </section>
 
           <section className="listing-details">
+            <span className="address">{listing.address}</span>
             <span className="price">${listing.price} /month</span>
-            <span className="location">
-              <i className="fa fa-map-marker" aria-hidden="true" />
-              {listing.city}, {listing.state}
-            </span>
+          </section>
+
+          <section className="view-more">
+            <a href="">view more</a>
           </section>
         </div>
       )
@@ -101,8 +127,22 @@ class Listings extends Component {
                   <option value="price-desc">Highest Price</option>
                 </select>
 
-                <i className="fa fa-list fa-lg" aria-hidden="true" />
-                <i className="fa fa-th fa-lg" aria-hidden="true" />
+                <i
+                  className={`fa fa-list fa-lg ${this.props.globalState.view ===
+                  'row'
+                    ? 'active'
+                    : ''}`}
+                  aria-hidden="true"
+                  onClick={this.props.changeView.bind(null, 'row')}
+                />
+                <i
+                  className={`fa fa-th fa-lg ${this.props.globalState.view ===
+                  'box'
+                    ? 'active'
+                    : ''}`}
+                  aria-hidden="true"
+                  onClick={this.props.changeView.bind(null, 'box')}
+                />
               </div>
             </div>
           </div>
